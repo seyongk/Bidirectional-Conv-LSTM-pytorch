@@ -39,14 +39,6 @@ class ConvGate(nn.Module):
 
 
 class ConvLSTMCell(nn.Module):
-    """
-    Xingjian Shi, Zhourong Chen, Hao Wang, Dit-Yan Yeung, Wai-kin Wong, and
-    Wang-chun Woo. 2015. Convolutional LSTM Network: a machine learning approach
-    for precipitation nowcasting. In Proceedings of the 28th International
-    Conference on Neural Information Processing Systems - Volume 1 (NIPS'15).
-    MIT Press, Cambridge, MA, USA, 802?810.
-    """
-
     def __init__(
         self, in_channels, hidden_channels, kernel_size, padding, stride, bias
     ):
