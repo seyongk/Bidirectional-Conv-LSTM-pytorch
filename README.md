@@ -1,1 +1,1 @@
-# Bidirectiona-Conv-LSTM-pytorch
+# Bidirectional-Conv-LSTM-pytorch
