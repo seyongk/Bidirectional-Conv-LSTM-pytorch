@@ -43,6 +43,8 @@ class ConvLSTMCell(nn.Module):
         self, in_channels, hidden_channels, kernel_size, padding, stride, bias
     ):
         super().__init__()
+        # To check the model structure with tools such as torchinfo, need to wrap
+        # the custom module with nn.ModuleList
         self.gates = nn.ModuleList(
             [ConvGate(in_channels, hidden_channels, kernel_size, padding, stride, bias)]
         )
@@ -83,6 +85,8 @@ class ConvLSTM(nn.Module):
         self.bidirectional = bidirectional
         self.batch_first = batch_first
 
+        # To check the model structure with tools such as torchinfo, need to wrap
+        # the custom module with nn.ModuleList
         self.conv_lstm_cells = nn.ModuleList(
             [
                 ConvLSTMCell(
